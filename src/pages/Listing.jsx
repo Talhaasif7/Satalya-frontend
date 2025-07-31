@@ -33,7 +33,7 @@ export default function Listing() {
       try {
         setLoading(true);
         const res = await fetch(
-          `import.meta.env.VITE_API_URL/listing/get/${params.listingId}`
+          `${import.meta.env.VITE_API_URL}listing/get/${params.listingId}`
         );
         const data = await res.json();
         if (data.success === false) {
